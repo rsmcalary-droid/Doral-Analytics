@@ -87,13 +87,13 @@ export const about = {
       name: "[Add name]",
       title: "Director of Strategy",
       location: "Cheltenham, England",
-      bio: "He leads our strategy. After years in central government specialising in communications, media relations, and policy, he gets to the heart of what each project needs and how to deliver it. He holds a BA in Politics and an MA in Law, and keeps a close eye on AI and other frontier technologies.",
+      bio: "He spent several years in central government, specialising in communications, media relations, and policy. He holds a BA in International Relations and an MA in Law, and maintains a close interest in AI and frontier technologies.",
     },
     {
       name: "[Add name]",
       title: "Director of Operations",
       location: "London, England",
-      bio: "He leads operations and delivery. After years in central government working across data analysis, stakeholder engagement, and discrete service delivery, he keeps every project organised, communicative, and firmly on track. He holds a BA in Politics.",
+      bio: "He spent several years in central government, working across data analysis, stakeholder engagement, and discrete service delivery. He holds a BA in Politics.",
     },
   ] satisfies Founder[],
   approach: [
