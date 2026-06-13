@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { requireAdmin } from "@/lib/supabase/dal";
+import { requireUser, isCurrentUserAdmin } from "@/lib/supabase/dal";
 import { signOut } from "@/lib/actions/auth";
 import { BrandLine } from "@/components/brand-mark";
 
@@ -9,12 +9,49 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
+function SignOutButton() {
+  return (
+    <form action={signOut}>
+      <button
+        type="submit"
+        className="rounded-full border border-line px-4 py-1.5 text-ink transition-colors hover:border-ink/40"
+      >
+        Sign out
+      </button>
+    </form>
+  );
+}
+
 export default async function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const user = await requireAdmin();
+  const user = await requireUser();
+  const isAdmin = await isCurrentUserAdmin();
+
+  if (!isAdmin) {
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
+        <BrandLine className="h-6 w-9 text-navy" />
+        <h1 className="mt-6 font-serif text-3xl text-ink">
+          Account pending approval
+        </h1>
+        <p className="mt-3 max-w-md text-muted">
+          You&apos;re signed in as{" "}
+          <span className="text-ink">{user.email}</span>, but this account
+          isn&apos;t approved yet. Ask an existing developer to add your email to
+          the team, then refresh this page.
+        </p>
+        <div className="mt-8 flex items-center gap-4 text-sm">
+          <Link href="/" className="text-muted hover:text-ink">
+            View site
+          </Link>
+          <SignOutButton />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen">
@@ -34,14 +71,7 @@ export default async function AdminLayout({
             <Link href="/" className="text-muted hover:text-ink">
               View site
             </Link>
-            <form action={signOut}>
-              <button
-                type="submit"
-                className="rounded-full border border-line px-4 py-1.5 text-ink transition-colors hover:border-ink/40"
-              >
-                Sign out
-              </button>
-            </form>
+            <SignOutButton />
           </div>
         </div>
       </header>

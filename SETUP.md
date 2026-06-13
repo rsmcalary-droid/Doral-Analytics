@@ -2,7 +2,7 @@
 
 A small marketing site (Home / About / Contact + Privacy & Terms) with a
 contact form backed by Supabase and a private developer dashboard at `/admin`
-where you read messages and reply from your own email.
+where your team reads messages and replies from their own email.
 
 **Stack:** Next.js 16 (App Router) · React 19 · Tailwind CSS 4 · Supabase
 (`@supabase/ssr`).
@@ -17,7 +17,7 @@ npm run dev
 ```
 
 Open http://localhost:3000. The marketing site works immediately. The contact
-form and `/admin` login stay in a "not connected yet" state until you complete
+form, sign-up, and login stay in a "not connected yet" state until you finish
 the Supabase steps below.
 
 ---
@@ -25,48 +25,54 @@ the Supabase steps below.
 ## 2. Supabase
 
 1. Create a project at https://supabase.com (free tier is fine).
-2. **SQL Editor → New query**, paste the contents of
+2. **SQL Editor → New query**, paste all of
    [`supabase/schema.sql`](supabase/schema.sql), and **Run**. This creates the
-   `contact_messages` table and its Row Level Security policies (the public can
-   only *insert*; only authenticated developers can *read/update*).
-3. **Project Settings → API**: copy the **Project URL** and the **anon public**
+   `contact_messages` table, the `admins` table, and the Row Level Security
+   that lets the public *submit* messages but only approved developers *read*
+   them. It's safe to re-run.
+3. In that SQL, change the **bootstrap line** to your own email before running
+   (or run it again after editing):
+   ```sql
+   insert into public.admins (email) values ('you@youremail.com')
+     on conflict (email) do nothing;
+   ```
+   This makes you the first approved developer.
+4. **Project Settings → API**: copy the **Project URL** and the **anon public**
    key into `.env.local` as `NEXT_PUBLIC_SUPABASE_URL` and
-   `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
-4. **Lock down sign-ups**: **Authentication → Sign In / Providers → Email** and
-   turn **Allow new users to sign up** OFF. The dashboard is invite-only.
-5. **Create your developer login**: **Authentication → Users → Add user**, set
-   an email + password, and tick "Auto Confirm". Use that at `/login`.
+   `NEXT_PUBLIC_SUPABASE_ANON_KEY`. Set `NEXT_PUBLIC_CONTACT_EMAIL` too.
+5. **Enable sign-ups**: **Authentication → Sign In / Providers → Email** and
+   make sure **Allow new users to sign up** is **ON**. (This is safe — Row
+   Level Security means only emails in the `admins` table can see any data,
+   even if a stranger signs up.) Leaving **Confirm email** on is recommended.
 
 ---
 
-## 3. Developer access
+## 3. Add your team
 
-Set `ADMIN_EMAILS` in `.env.local` to a comma-separated list of the emails
-allowed into `/admin`:
+Two ways for a teammate to get access — both end with their email in the
+`admins` table:
 
-```
-ADMIN_EMAILS=you@example.com,partner@example.com
-```
+- **They sign up, you approve:** they go to `/signup` and create an account,
+  then you add their email in **Supabase → Table Editor → `admins` → Insert
+  row**. They refresh and they're in.
+- **You add them first:** insert their email into `admins`, then they sign up at
+  `/signup` with that email.
 
-This is a second gate on top of Supabase auth. (If left empty, any authenticated
-Supabase user is allowed — fine for local dev, but set it for production.)
-
-Also set `NEXT_PUBLIC_CONTACT_EMAIL` to your public contact address (shown on
-the site and in the legal pages).
+Anyone signed in whose email is **not** in `admins` sees a "pending approval"
+screen and no data. Remove someone by deleting their row.
 
 ---
 
 ## 4. Reading & replying to messages
 
-1. Sign in at `/login`, then see every submission at `/admin`.
+1. Sign in at `/login` (or sign up at `/signup`), then see every submission at
+   `/admin`.
 2. Click a message to read it in full.
 3. **Reply via email** opens a pre-filled message in your own mail app (Gmail,
-   Outlook, Apple Mail…) with their note quoted — you reply straight from your
-   own inbox.
-4. After you send it, click **Mark as replied** to track it. **Archive** when
-   you're done.
+   Outlook, Apple Mail…) with their note quoted — you reply from your own inbox.
+4. After you send it, click **Mark as replied**. **Archive** when you're done.
 
-No email service or API keys required.
+No outbound email service or API keys required.
 
 ---
 
@@ -84,8 +90,10 @@ No email service or API keys required.
 1. Push this repo to GitHub and import it at https://vercel.com/new.
 2. Add these under **Settings → Environment Variables**:
    `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`,
-   `NEXT_PUBLIC_CONTACT_EMAIL`, `ADMIN_EMAILS`.
-3. Deploy. Add your custom domain under **Settings → Domains**.
+   `NEXT_PUBLIC_CONTACT_EMAIL`.
+3. In Supabase, add your production URL under **Authentication → URL
+   Configuration → Site URL / Redirect URLs** so confirmation links work.
+4. Deploy. Add your custom domain under **Settings → Domains**.
 
 ---
 

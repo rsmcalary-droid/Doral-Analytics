@@ -30,20 +30,3 @@ export function isSupabaseConfigured(): boolean {
     !key.includes("your-")
   );
 }
-
-/** Comma-separated allowlist of developer emails permitted in the dashboard. */
-export function getAdminEmails(): string[] {
-  return (process.env.ADMIN_EMAILS || "")
-    .split(",")
-    .map((e) => e.trim().toLowerCase())
-    .filter(Boolean);
-}
-
-export function isAdminEmail(email?: string | null): boolean {
-  if (!email) return false;
-  const admins = getAdminEmails();
-  // If no allowlist is configured, any authenticated Supabase user counts as a
-  // developer. Set ADMIN_EMAILS in production to lock this down.
-  if (admins.length === 0) return true;
-  return admins.includes(email.toLowerCase());
-}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { requireAdmin } from "@/lib/supabase/dal";
+import { requireUser } from "@/lib/supabase/dal";
 import { createClient } from "@/lib/supabase/server";
 import { StatusBadge } from "@/components/status-badge";
 import type { ContactMessage } from "@/lib/types";
@@ -12,7 +12,7 @@ function formatDate(iso: string) {
 }
 
 export default async function AdminPage() {
-  await requireAdmin();
+  await requireUser();
 
   const supabase = await createClient();
   const { data, error } = await supabase

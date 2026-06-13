@@ -2,16 +2,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { Wordmark } from "@/components/brand-mark";
-import { LoginForm } from "@/components/login-form";
+import { SignUpForm } from "@/components/signup-form";
 import { getCurrentUser } from "@/lib/supabase/dal";
 import { isSupabaseConfigured } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Developer login",
+  title: "Developer sign-up",
   robots: { index: false },
 };
 
-export default async function LoginPage() {
+export default async function SignUpPage() {
   const user = await getCurrentUser();
   if (user) redirect("/admin");
 
@@ -23,9 +23,11 @@ export default async function LoginPage() {
         </div>
 
         <div className="mt-10 rounded-2xl border border-line bg-white p-8">
-          <h1 className="font-serif text-2xl text-ink">Developer login</h1>
+          <h1 className="font-serif text-2xl text-ink">
+            Create a developer account
+          </h1>
           <p className="mt-1 text-sm text-muted">
-            Sign in to view and reply to contact messages.
+            Sign up to view and reply to contact messages.
           </p>
 
           {!isSupabaseConfigured() && (
@@ -36,13 +38,13 @@ export default async function LoginPage() {
           )}
 
           <div className="mt-6">
-            <LoginForm />
+            <SignUpForm />
           </div>
 
           <p className="mt-5 text-center text-sm text-muted">
-            Need an account?{" "}
-            <Link href="/signup" className="text-navy hover:text-navy-dark">
-              Sign up
+            Already have an account?{" "}
+            <Link href="/login" className="text-navy hover:text-navy-dark">
+              Sign in
             </Link>
           </p>
         </div>

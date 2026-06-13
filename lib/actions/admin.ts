@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
-import { requireAdmin } from "@/lib/supabase/dal";
+import { getCurrentUser, isCurrentUserAdmin } from "@/lib/supabase/dal";
 
 const VALID_STATUSES = ["new", "replied", "archived"] as const;
 type Status = (typeof VALID_STATUSES)[number];
@@ -10,10 +10,12 @@ type Status = (typeof VALID_STATUSES)[number];
 /**
  * Update a message's status (new / replied / archived). Replies are sent from
  * the developer's own email client via a mailto: link, so marking "replied"
- * here just records that it was handled.
+ * here just records that it was handled. Row Level Security is the real guard;
+ * this app-level check keeps the UI honest.
  */
 export async function setStatus(formData: FormData): Promise<void> {
-  const admin = await requireAdmin();
+  const user = await getCurrentUser();
+  if (!user || !(await isCurrentUserAdmin())) return;
 
   const id = String(formData.get("id") || "");
   const status = String(formData.get("status") || "");
@@ -22,7 +24,7 @@ export async function setStatus(formData: FormData): Promise<void> {
   const update: Record<string, unknown> = { status };
   if (status === "replied") {
     update.replied_at = new Date().toISOString();
-    update.replied_by = admin.email;
+    update.replied_by = user.email;
   }
 
   const supabase = await createClient();

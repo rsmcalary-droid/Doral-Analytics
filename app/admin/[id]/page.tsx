@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { requireAdmin } from "@/lib/supabase/dal";
+import { requireUser } from "@/lib/supabase/dal";
 import { createClient } from "@/lib/supabase/server";
 import { setStatus } from "@/lib/actions/admin";
 import { StatusBadge } from "@/components/status-badge";
@@ -41,7 +41,7 @@ export default async function MessagePage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  await requireAdmin();
+  await requireUser();
   const { id } = await params;
 
   const supabase = await createClient();
