@@ -31,11 +31,6 @@ export function isSupabaseConfigured(): boolean {
   );
 }
 
-/** True once Resend is configured so the dashboard can send replies. */
-export function isEmailConfigured(): boolean {
-  return !!process.env.RESEND_API_KEY && !!process.env.CONTACT_FROM_EMAIL;
-}
-
 /** Comma-separated allowlist of developer emails permitted in the dashboard. */
 export function getAdminEmails(): string[] {
   return (process.env.ADMIN_EMAILS || "")
