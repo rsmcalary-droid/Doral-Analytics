@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     description:
       "Bespoke technical solutions, built around your business — cutting-edge technology with service at the centre.",
     type: "website",
-    images: ["/logo.png"],
   },
 };
 
