@@ -67,6 +67,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Process */}
+      <section className="border-t border-line bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="max-w-2xl">
+            <h2 className="font-serif text-3xl text-ink sm:text-4xl">
+              How an engagement works
+            </h2>
+            <p className="mt-3 leading-relaxed text-muted">
+              Small, senior, and hands-on from first call to final handover —
+              here&apos;s the shape of a typical project.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-10 sm:grid-cols-3">
+            {home.process.map((p, i) => (
+              <div key={p.title}>
+                <span className="font-serif text-sm text-navy">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-1 font-serif text-xl text-ink">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {p.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Closing CTA */}
       <section className="mx-auto max-w-6xl px-6">
         <div className="rounded-3xl bg-navy px-8 py-14 text-center sm:px-16">

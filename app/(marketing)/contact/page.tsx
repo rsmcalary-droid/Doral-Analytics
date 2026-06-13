@@ -40,7 +40,7 @@ export default function ContactPage() {
             <div>
               <dt className="font-medium text-ink">Where we are</dt>
               <dd className="text-muted">
-                Doral, in the greater Miami area, Florida, USA
+                Cheltenham, England, United Kingdom
               </dd>
             </div>
             <div>

@@ -5,7 +5,7 @@
 export const COMPANY = {
   name: "Doral Analytics",
   tagline: "Innovating Business Solutions",
-  location: "Doral, Florida",
+  location: "Cheltenham, England",
 } as const;
 
 /** Public-facing contact address. Used in legal pages and the contact page. */

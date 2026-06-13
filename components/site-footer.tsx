@@ -71,7 +71,7 @@ export function SiteFooter() {
           <p>
             © {year} {COMPANY.name}. All rights reserved.
           </p>
-          <p>{COMPANY.location}, USA</p>
+          <p>{COMPANY.location}, United Kingdom</p>
         </div>
       </div>
     </footer>
