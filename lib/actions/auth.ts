@@ -69,18 +69,29 @@ export async function signUp(
   const { data, error } = await supabase.auth.signUp({ email, password });
 
   if (error) {
+    console.error("auth.signUp failed:", error.message);
     const msg = error.message.toLowerCase();
-    if (msg.includes("disabled") || msg.includes("not allowed")) {
-      return {
-        error: "Sign-ups are currently closed — ask an admin to add you.",
-      };
-    }
     if (msg.includes("registered") || msg.includes("already")) {
       return {
-        error: "An account with this email already exists — try signing in.",
+        error: "An account with this email already exists — try signing in instead.",
       };
     }
-    return { error: "Couldn't create the account. Please try again." };
+    if (msg.includes("password")) {
+      return { error: "That password was rejected — try a longer, less common one." };
+    }
+    if (msg.includes("rate") || msg.includes("sending") || msg.includes("confirmation")) {
+      return {
+        error:
+          "Confirmation email is rate-limited. Turn off 'Confirm email' in Supabase (Authentication → Providers → Email), or wait a few minutes and retry.",
+      };
+    }
+    if (msg.includes("disabled") || msg.includes("not allowed")) {
+      return {
+        error: "Email sign-ups are disabled in Supabase — enable them under Authentication → Providers → Email.",
+      };
+    }
+    // Surface the real reason for anything else.
+    return { error: `Couldn't create the account: ${error.message}` };
   }
 
   // With email confirmation on, there's no session until the link is clicked.
