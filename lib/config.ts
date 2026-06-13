@@ -3,14 +3,14 @@
 // NEXT_PUBLIC_* values that are available in the browser.
 
 export const COMPANY = {
-  name: "Doral Analytics",
+  name: "Doral Systems Ltd",
   tagline: "Innovating Business Solutions",
   location: "Cheltenham, England",
 } as const;
 
 /** Public-facing contact address. Used in legal pages and the contact page. */
 export const CONTACT_EMAIL =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "hello@doralanalytics.com";
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "hello@doralsystems.co.uk";
 
 export const navLinks = [
   { href: "/", label: "Home" },

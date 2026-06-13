@@ -60,7 +60,7 @@ export default async function AdminLayout({
           <Link href="/admin" className="flex items-center gap-2.5">
             <BrandLine className="h-5 w-7 text-navy" />
             <span className="font-serif text-lg font-medium text-ink">
-              Doral Analytics
+              Doral Systems
             </span>
             <span className="ml-1 rounded-full bg-navy/10 px-2 py-0.5 text-xs font-medium text-navy">
               Dashboard

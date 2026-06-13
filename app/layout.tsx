@@ -16,15 +16,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://doralanalytics.com"),
+  metadataBase: new URL("https://doralsystems.co.uk"),
   title: {
-    default: "Doral Analytics — Innovating Business Solutions",
-    template: "%s · Doral Analytics",
+    default: "Doral Systems — Innovating Business Solutions",
+    template: "%s · Doral Systems",
   },
   description:
-    "Doral Analytics builds bespoke technical solutions for ambitious businesses — cutting-edge technology, shaped around what you actually need, with service at the centre.",
+    "Doral Systems builds bespoke technical solutions for ambitious businesses — cutting-edge technology, shaped around what you actually need, with service at the centre.",
   openGraph: {
-    title: "Doral Analytics",
+    title: "Doral Systems",
     description:
       "Bespoke technical solutions, built around your business — cutting-edge technology with service at the centre.",
     type: "website",

@@ -59,8 +59,8 @@ export default async function MessagePage({
     .split("\n")
     .map((line) => `> ${line}`)
     .join("\n");
-  const replySubject = `Re: ${m.subject || "Your message to Doral Analytics"}`;
-  const replyBody = `Hi ${firstName},\n\n\n\n— Doral Analytics\n\n---------- Original message ----------\n${quoted}`;
+  const replySubject = `Re: ${m.subject || "Your message to Doral Systems"}`;
+  const replyBody = `Hi ${firstName},\n\n\n\n— Doral Systems\n\n---------- Original message ----------\n${quoted}`;
   const mailtoHref = `mailto:${m.email}?subject=${encodeURIComponent(
     replySubject,
   )}&body=${encodeURIComponent(replyBody)}`;

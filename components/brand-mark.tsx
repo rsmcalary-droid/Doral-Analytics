@@ -22,11 +22,11 @@ export function Wordmark({ className = "" }: { className?: string }) {
     <Link
       href="/"
       className={`group inline-flex items-center gap-2.5 ${className}`}
-      aria-label="Doral Analytics — home"
+      aria-label="Doral Systems — home"
     >
       <BrandLine className="h-5 w-7 text-navy transition-transform group-hover:-translate-y-0.5" />
       <span className="font-serif text-[1.4rem] font-medium leading-none tracking-tight text-ink">
-        Doral Analytics
+        Doral Systems
       </span>
     </Link>
   );

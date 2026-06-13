@@ -21,7 +21,7 @@ export const home = {
   hero: {
     headline: "Bespoke technical solutions, built around your business.",
     subhead:
-      "Doral Analytics designs and builds cutting-edge technical solutions for ambitious small and medium-sized businesses — shaped around what you actually need, and delivered by a small, senior team who care as much about service as software.",
+      "Doral Systems designs and builds cutting-edge technical solutions for ambitious small and medium-sized businesses — shaped around what you actually need, and delivered by a small, senior team who care as much about service as software.",
     ctaPrimary: "Start a conversation",
     ctaSecondary: "About us",
   },
@@ -79,7 +79,7 @@ export const home = {
 };
 
 export const about = {
-  lead: "Doral Analytics is a boutique consultancy building bespoke, technology-driven solutions for small and medium-sized businesses (SMEs) that want to do things better. We were founded by two people who spent years in central government — across communications, data, stakeholder engagement, and complex programmes — and who saw how often good technology fails because no one brings the people and the process along with it. We pair genuinely modern technology with that hard-won experience, and we deliberately take on a small number of engagements at a time, so each one gets senior attention and is built around what it actually needs. We're based in Cheltenham and London.",
+  lead: "Doral Systems is a boutique consultancy building bespoke, technology-driven solutions for small and medium-sized businesses (SMEs) that want to do things better. We were founded by two people who spent years in central government — across communications, data, stakeholder engagement, and complex programmes — and who saw how often good technology fails because no one brings the people and the process along with it. We pair genuinely modern technology with that hard-won experience, and we deliberately take on a small number of engagements at a time, so each one gets senior attention and is built around what it actually needs. We're based in Cheltenham and London.",
   mission:
     "Our mission is to give ambitious SMEs an edge through technology that's built around them — not off-the-shelf, not over-engineered, but bespoke, modern, and genuinely useful. We care as much about service as we do about software: listening closely, communicating clearly, and staying close from the first conversation to the final handover, so the solutions we build are understood, adopted, and made to last.",
   founders: [
@@ -137,11 +137,11 @@ export const about = {
 export const privacy: LegalDoc = {
   title: "Privacy Policy",
   lastUpdated: "13 June 2026",
-  intro: `Doral Analytics ("Doral Analytics", "we", "us", or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains what personal information we collect through our website, how we use and protect it, and the rights you have under UK data protection law. We are a technical solutions consultancy based in Cheltenham, England. Our website is informational, and the only personal data we collect from the public is the information you choose to provide through our contact form. We do not sell your personal information. This policy is a general template and should be reviewed by a qualified solicitor before launch to confirm it reflects our actual practices and complies with applicable law.`,
+  intro: `Doral Systems Ltd ("Doral Systems", "we", "us", or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains what personal information we collect through our website, how we use and protect it, and the rights you have under UK data protection law. We are a technical solutions consultancy based in Cheltenham, England. Our website is informational, and the only personal data we collect from the public is the information you choose to provide through our contact form. We do not sell your personal information. This policy is a general template and should be reviewed by a qualified solicitor before launch to confirm it reflects our actual practices and complies with applicable law.`,
   sections: [
     {
       heading: "Who We Are",
-      body: `Doral Analytics is the data controller responsible for your personal data when you use this website. We are a boutique technical solutions consultancy based in Cheltenham, England. If you have any questions about this policy or about how we handle your information, you can reach us at {{CONTACT_EMAIL}}.`,
+      body: `Doral Systems Ltd is the data controller responsible for your personal data when you use this website. We are a boutique technical solutions consultancy based in Cheltenham, England. If you have any questions about this policy or about how we handle your information, you can reach us at {{CONTACT_EMAIL}}.`,
     },
     {
       heading: "Information We Collect",
@@ -189,7 +189,7 @@ export const privacy: LegalDoc = {
     },
     {
       heading: "How to Contact Us",
-      body: `If you have questions about this Privacy Policy, about how we handle your personal information, or if you wish to exercise any of your rights, please contact us at {{CONTACT_EMAIL}}. Doral Analytics is based in Cheltenham, England. You can also contact the Information Commissioner's Office (ICO) at ico.org.uk if you have concerns we have not been able to resolve.`,
+      body: `If you have questions about this Privacy Policy, about how we handle your personal information, or if you wish to exercise any of your rights, please contact us at {{CONTACT_EMAIL}}. Doral Systems is based in Cheltenham, England. You can also contact the Information Commissioner's Office (ICO) at ico.org.uk if you have concerns we have not been able to resolve.`,
     },
   ],
 };
@@ -197,11 +197,11 @@ export const privacy: LegalDoc = {
 export const terms: LegalDoc = {
   title: "Terms of Service",
   lastUpdated: "13 June 2026",
-  intro: `These Terms of Service ("Terms") govern your access to and use of the Doral Analytics website (the "Site"). Doral Analytics is a technical solutions consultancy based in Cheltenham, England. By accessing or using the Site you agree to be bound by these Terms. If you do not agree, please do not use the Site. Please read these Terms carefully, as they include important information about your rights and obligations, together with limitations and exclusions that apply to you. This document is a general template provided for information only and should be reviewed by a qualified solicitor before launch to confirm it fits your circumstances and complies with applicable law.`,
+  intro: `These Terms of Service ("Terms") govern your access to and use of the Doral Systems website (the "Site"). Doral Systems Ltd is a technical solutions consultancy based in Cheltenham, England. By accessing or using the Site you agree to be bound by these Terms. If you do not agree, please do not use the Site. Please read these Terms carefully, as they include important information about your rights and obligations, together with limitations and exclusions that apply to you. This document is a general template provided for information only and should be reviewed by a qualified solicitor before launch to confirm it fits your circumstances and complies with applicable law.`,
   sections: [
     {
       heading: "Acceptance of Terms",
-      body: `By accessing, browsing, or otherwise using the Site, you acknowledge that you have read, understood, and agree to be bound by these Terms and by any additional guidelines or policies referred to here. These Terms form a binding agreement between you and Doral Analytics. If you are using the Site on behalf of a company or other organisation, you confirm that you have authority to bind that organisation to these Terms, and references to "you" include that organisation. We may update these Terms from time to time as described below, and your continued use of the Site after any update means you accept the revised Terms.`,
+      body: `By accessing, browsing, or otherwise using the Site, you acknowledge that you have read, understood, and agree to be bound by these Terms and by any additional guidelines or policies referred to here. These Terms form a binding agreement between you and Doral Systems. If you are using the Site on behalf of a company or other organisation, you confirm that you have authority to bind that organisation to these Terms, and references to "you" include that organisation. We may update these Terms from time to time as described below, and your continued use of the Site after any update means you accept the revised Terms.`,
     },
     {
       heading: "Eligibility and Acceptable Use",
@@ -209,11 +209,11 @@ export const terms: LegalDoc = {
     },
     {
       heading: "Intellectual Property",
-      body: `The Site and all of its contents — including text, graphics, logos, the Doral Analytics name and wordmark, page layouts, design elements, images, and any underlying code — are owned by or licensed to Doral Analytics and are protected by UK and international copyright, trade mark, and other intellectual property laws. Except as expressly permitted, you may not copy, reproduce, distribute, modify, publicly display, create derivative works from, or otherwise exploit any part of the Site without our prior written permission. You are granted a limited, revocable, non-exclusive, non-transferable licence to access and view the Site for your own informational and non-commercial purposes. All rights not expressly granted are reserved.`,
+      body: `The Site and all of its contents — including text, graphics, logos, the Doral Systems name and wordmark, page layouts, design elements, images, and any underlying code — are owned by or licensed to Doral Systems and are protected by UK and international copyright, trade mark, and other intellectual property laws. Except as expressly permitted, you may not copy, reproduce, distribute, modify, publicly display, create derivative works from, or otherwise exploit any part of the Site without our prior written permission. You are granted a limited, revocable, non-exclusive, non-transferable licence to access and view the Site for your own informational and non-commercial purposes. All rights not expressly granted are reserved.`,
     },
     {
       heading: "Contact Form and Submissions",
-      body: `The Site offers a contact form so you can send us enquiries. Any information you submit through the Site, including your name, email address, and the contents of your message ("Submissions"), is provided voluntarily. You are responsible for the accuracy of your Submissions and agree not to submit anything false, misleading, unlawful, or infringing, or any sensitive personal information that is not necessary for your enquiry. By sending a Submission you grant us permission to use the information to respond to and manage your enquiry and any resulting business relationship. Please do not include confidential or proprietary information in a Submission, as we cannot guarantee that communications sent through the Site are secure, and sending an enquiry does not by itself create any consulting, advisory, or other professional relationship between you and Doral Analytics.`,
+      body: `The Site offers a contact form so you can send us enquiries. Any information you submit through the Site, including your name, email address, and the contents of your message ("Submissions"), is provided voluntarily. You are responsible for the accuracy of your Submissions and agree not to submit anything false, misleading, unlawful, or infringing, or any sensitive personal information that is not necessary for your enquiry. By sending a Submission you grant us permission to use the information to respond to and manage your enquiry and any resulting business relationship. Please do not include confidential or proprietary information in a Submission, as we cannot guarantee that communications sent through the Site are secure, and sending an enquiry does not by itself create any consulting, advisory, or other professional relationship between you and Doral Systems.`,
     },
     {
       heading: `Disclaimers; Information Provided "As Is"`,
@@ -225,7 +225,7 @@ export const terms: LegalDoc = {
     },
     {
       heading: "Indemnification",
-      body: `You agree to indemnify and hold harmless Doral Analytics and its owners, members, employees, contractors, and agents from and against any claims, liabilities, damages, losses, costs, and expenses, including reasonable legal fees, arising out of or connected with: your access to or use of the Site; your breach of these Terms; your breach of any applicable law or the rights of any third party; or any content or Submission you provide through the Site. This obligation survives the termination of these Terms and your use of the Site.`,
+      body: `You agree to indemnify and hold harmless Doral Systems and its owners, members, employees, contractors, and agents from and against any claims, liabilities, damages, losses, costs, and expenses, including reasonable legal fees, arising out of or connected with: your access to or use of the Site; your breach of these Terms; your breach of any applicable law or the rights of any third party; or any content or Submission you provide through the Site. This obligation survives the termination of these Terms and your use of the Site.`,
     },
     {
       heading: "Third-Party Links",
@@ -241,7 +241,7 @@ export const terms: LegalDoc = {
     },
     {
       heading: "How to Contact Us",
-      body: `If you have any questions about these Terms or the Site, you can contact us by email at {{CONTACT_EMAIL}}. Doral Analytics is based in Cheltenham, England. We will make reasonable efforts to respond to legitimate enquiries in good time.`,
+      body: `If you have any questions about these Terms or the Site, you can contact us by email at {{CONTACT_EMAIL}}. Doral Systems is based in Cheltenham, England. We will make reasonable efforts to respond to legitimate enquiries in good time.`,
     },
   ],
 };

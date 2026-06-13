@@ -5,7 +5,7 @@ import { about } from "@/lib/content";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Doral Analytics — a boutique technical solutions consultancy in Cheltenham and London, building bespoke, cutting-edge technology around what your business needs.",
+    "Meet Doral Systems — a boutique technical solutions consultancy in Cheltenham and London, building bespoke, cutting-edge technology around what your business needs.",
 };
 
 export default function AboutPage() {
@@ -19,7 +19,7 @@ export default function AboutPage() {
           About us
         </p>
         <h1 className="mt-4 font-serif text-4xl leading-tight text-ink sm:text-5xl">
-          A boutique analytics partner, built around your decisions.
+          A boutique technical partner, built around your business.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-muted">{about.lead}</p>
       </section>
@@ -35,7 +35,7 @@ export default function AboutPage() {
         <section className="mx-auto mt-16 max-w-5xl px-6">
           <h2 className="font-serif text-3xl text-ink">The people behind it</h2>
           <p className="mt-3 max-w-2xl leading-relaxed text-muted">
-            Doral Analytics was founded by two people who spent years in
+            Doral Systems was founded by two people who spent years in
             central government — and who care as much about communication and
             delivery as they do about technology.
           </p>
@@ -88,11 +88,11 @@ export default function AboutPage() {
 
       <section className="mx-auto mt-20 max-w-3xl px-6 text-center">
         <h2 className="font-serif text-3xl text-ink">
-          Let&apos;s talk about your data.
+          Let&apos;s build something together.
         </h2>
         <p className="mt-3 text-muted">
-          Tell us what you&apos;re trying to solve — we&apos;ll show you where
-          the data can take you.
+          Tell us what you&apos;re trying to solve — we&apos;ll show you what we
+          can build for you.
         </p>
         <Link
           href="/contact"

@@ -1,4 +1,4 @@
-# Doral Analytics — setup
+# Doral Systems — setup
 
 A small marketing site (Home / About / Contact + Privacy & Terms) with a
 contact form backed by Supabase and a private developer dashboard at `/admin`

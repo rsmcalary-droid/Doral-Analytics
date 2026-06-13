@@ -1,4 +1,4 @@
-# Doral Analytics — Brand & Design Spec
+# Doral Systems — Brand & Design Spec
 
 A reference for building on-brand materials (decks, cards, social, docs). Derived
 from the logo and the live website. The website implements this spec in
@@ -8,7 +8,7 @@ from the logo and the live website. The website implements this spec in
 
 ## 1. Logo
 
-- **Master file:** `public/logo.png` — black serif wordmark "Doral Analytics"
+- **Master file:** `public/logo.png` — black serif wordmark "Doral Systems"
   with the tagline "Innovating Business Solutions" and a hand-drawn line-chart
   mark, on a warm near-white field.
 - The logo is **pure monochrome** (verified: ink `#000000`, ~0 color

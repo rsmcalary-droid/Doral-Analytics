@@ -4,7 +4,7 @@ import { privacy } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Doral Analytics collects, uses, and protects your information.",
+  description: "How Doral Systems collects, uses, and protects your information.",
 };
 
 export default function PrivacyPage() {

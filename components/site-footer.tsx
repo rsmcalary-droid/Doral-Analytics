@@ -12,7 +12,7 @@ export function SiteFooter() {
           <div className="flex items-center gap-2.5">
             <BrandLine className="h-5 w-7 text-navy" />
             <span className="font-serif text-xl font-medium tracking-tight text-ink">
-              Doral Analytics
+              Doral Systems
             </span>
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">

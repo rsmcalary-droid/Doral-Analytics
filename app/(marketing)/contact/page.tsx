@@ -5,7 +5,7 @@ import { CONTACT_EMAIL } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Tell us what you're trying to solve. Get in touch with Doral Analytics and we'll reply by email.",
+    "Tell us what you're trying to solve. Get in touch with Doral Systems and we'll reply by email.",
 };
 
 export default function ContactPage() {

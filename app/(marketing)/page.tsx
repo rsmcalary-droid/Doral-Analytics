@@ -43,7 +43,7 @@ export default function HomePage() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="max-w-xl">
             <p className="text-sm font-medium uppercase tracking-wider text-navy">
-              Doral Analytics
+              Doral Systems
             </p>
             <h1 className="mt-4 font-serif text-5xl leading-[1.05] text-ink sm:text-6xl">
               {home.hero.headline}
