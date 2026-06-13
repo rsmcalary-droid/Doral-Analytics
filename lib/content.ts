@@ -59,16 +59,16 @@ export const home = {
   ] satisfies Item[],
   process: [
     {
-      title: "Understand",
-      body: "We start with your goals, your people, and how things work today — getting to the real problem before we propose a solution.",
+      title: "Understand your needs",
+      body: "We come to you, get to know your business, and review what you actually need — the goals, the constraints, and the problems worth solving.",
     },
     {
-      title: "Build",
-      body: "We design and build in tight, visible iterations, keeping you and your stakeholders involved so the solution fits and nothing's a surprise.",
+      title: "Shape the specification",
+      body: "We work with you to turn that into a clear, agreed specification, so everyone knows exactly what's being built — and why — before the work begins.",
     },
     {
-      title: "Hand over",
-      body: "We document everything, train your team, and stay on hand — leaving you with something you own, understand, and can build on.",
+      title: "Build the solution",
+      body: "Our team brings its technical know-how and experience to build the solution to that specification, then delivers it ready to use.",
     },
   ] satisfies Item[],
   closing: {

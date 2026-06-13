@@ -106,31 +106,52 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Process */}
-      <section className="border-t border-line bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="max-w-2xl">
-            <h2 className="font-serif text-3xl text-ink sm:text-4xl">
-              How an engagement works
-            </h2>
-            <p className="mt-3 leading-relaxed text-muted">
-              Small, senior, and hands-on from first call to final handover —
-              here&apos;s the shape of a typical project.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-10 sm:grid-cols-3">
-            {home.process.map((p, i) => (
-              <div key={p.title}>
-                <span className="font-serif text-sm text-navy">
-                  {String(i + 1).padStart(2, "0")}
+      {/* Process flowchart */}
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="max-w-2xl">
+          <h2 className="font-serif text-3xl text-ink sm:text-4xl">
+            How we work with you
+          </h2>
+          <p className="mt-3 leading-relaxed text-muted">
+            Every project follows the same clear path — from understanding your
+            needs to delivering a solution built around them.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {home.process.map((p, i) => (
+            <div
+              key={p.title}
+              className="relative rounded-2xl border border-line bg-white p-7"
+            >
+              <div className="flex items-center gap-3">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy text-sm font-medium text-paper">
+                  {i + 1}
                 </span>
-                <h3 className="mt-1 font-serif text-xl text-ink">{p.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {p.body}
-                </p>
+                <h3 className="font-serif text-xl text-ink">{p.title}</h3>
               </div>
-            ))}
-          </div>
+              <p className="mt-4 text-sm leading-relaxed text-muted">{p.body}</p>
+              {i < home.process.length - 1 && (
+                <>
+                  <span
+                    aria-hidden="true"
+                    className="absolute right-0 top-1/2 z-10 hidden h-7 w-7 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full border border-line bg-paper text-navy md:flex"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="m9 6 6 6-6 6" />
+                    </svg>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute bottom-0 left-1/2 z-10 flex h-7 w-7 -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full border border-line bg-paper text-navy md:hidden"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </span>
+                </>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
