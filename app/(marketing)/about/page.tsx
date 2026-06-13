@@ -35,8 +35,8 @@ export default function AboutPage() {
         <section className="mx-auto mt-16 max-w-5xl px-6">
           <h2 className="font-serif text-3xl text-ink">The people behind it</h2>
           <p className="mt-3 max-w-2xl leading-relaxed text-muted">
-            Doral Analytics was founded by two people who spent years in the
-            public sector — and who care as much about communication and
+            Doral Analytics was founded by two people who spent years in
+            central government — and who care as much about communication and
             delivery as they do about technology.
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">

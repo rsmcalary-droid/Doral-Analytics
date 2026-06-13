@@ -21,7 +21,7 @@ export const home = {
   hero: {
     headline: "Bespoke technical solutions, built around your business.",
     subhead:
-      "Doral Analytics designs and builds cutting-edge technical solutions shaped around what your business actually needs — delivered by a small, senior team who care as much about service as software.",
+      "Doral Analytics designs and builds cutting-edge technical solutions for ambitious small and medium-sized businesses — shaped around what you actually need, and delivered by a small, senior team who care as much about service as software.",
     ctaPrimary: "Start a conversation",
     ctaSecondary: "About us",
   },
@@ -79,21 +79,21 @@ export const home = {
 };
 
 export const about = {
-  lead: "Doral Analytics is a boutique consultancy building bespoke technical solutions for businesses that want to do things better. We were founded by two people who spent years in the public sector — leading communications, stakeholder engagement, and complex programmes — and who saw how often good technology fails because no one brings the people and the process along with it. We pair genuinely modern technology with that hard-won experience, and we deliberately take on a small number of engagements at a time, so each one gets senior attention and is built around what it actually needs. We're based in Cheltenham and London.",
+  lead: "Doral Analytics is a boutique consultancy building bespoke, technology-driven solutions for small and medium-sized businesses (SMEs) that want to do things better. We were founded by two people who spent years in central government — across communications, data, stakeholder engagement, and complex programmes — and who saw how often good technology fails because no one brings the people and the process along with it. We pair genuinely modern technology with that hard-won experience, and we deliberately take on a small number of engagements at a time, so each one gets senior attention and is built around what it actually needs. We're based in Cheltenham and London.",
   mission:
-    "Our mission is to give ambitious businesses an edge through technology that's built around them — not off-the-shelf, not over-engineered, but bespoke, modern, and genuinely useful. We care as much about service as we do about software: listening closely, communicating clearly, and staying close from the first conversation to the final handover, so the solutions we build are understood, adopted, and made to last.",
+    "Our mission is to give ambitious SMEs an edge through technology that's built around them — not off-the-shelf, not over-engineered, but bespoke, modern, and genuinely useful. We care as much about service as we do about software: listening closely, communicating clearly, and staying close from the first conversation to the final handover, so the solutions we build are understood, adopted, and made to last.",
   founders: [
     {
       name: "[Add name]",
       title: "Director of Strategy",
       location: "Cheltenham, England",
-      bio: "After years in the public sector leading communications and stakeholder engagement on complex, high-scrutiny programmes, [name] shapes the strategy behind every engagement — getting to the heart of what's really needed and making sure the work delivers against it.",
+      bio: "He leads our strategy. After years in central government specialising in communications, media relations, and policy, he gets to the heart of what each project needs and how to deliver it. He holds a BA in Politics and an MA in Law, and keeps a close eye on AI and other frontier technologies.",
     },
     {
       name: "[Add name]",
       title: "Director of Operations",
       location: "London, England",
-      bio: "Drawing on years of public-sector experience in process management and large-scale stakeholder engagement, [name] runs delivery day to day — keeping projects organised, communicative, and firmly on track, so everyone always knows where things stand.",
+      bio: "He leads operations and delivery. After years in central government working across data analysis, stakeholder engagement, and discrete service delivery, he keeps every project organised, communicative, and firmly on track. He holds a BA in Politics.",
     },
   ] satisfies Founder[],
   approach: [
