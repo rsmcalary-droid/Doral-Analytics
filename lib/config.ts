@@ -8,9 +8,9 @@ export const COMPANY = {
   location: "Cheltenham, England",
 } as const;
 
-/** Public-facing contact address. Used in legal pages and the contact page. */
-export const CONTACT_EMAIL =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "hello@doralsystems.co.uk";
+/** Public-facing contact address. Used in legal pages and the contact page.
+ *  Hardcoded so it can't be overridden by a stale NEXT_PUBLIC_CONTACT_EMAIL. */
+export const CONTACT_EMAIL = "hello@doralsystems.co.uk";
 
 export const navLinks = [
   { href: "/", label: "Home" },
