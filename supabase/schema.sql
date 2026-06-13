@@ -53,6 +53,23 @@ $$;
 
 grant execute on function public.is_admin() to authenticated;
 
+-- May this email create a developer account? Sign-up is invite-only: an email
+-- can only register if it's already been added to public.admins.
+create or replace function public.can_signup(check_email text)
+returns boolean
+language sql
+security definer
+stable
+set search_path = public
+as $$
+  select exists (
+    select 1 from public.admins
+    where lower(email) = lower(check_email)
+  );
+$$;
+
+grant execute on function public.can_signup(text) to anon, authenticated;
+
 -- ---------------------------------------------------------------------------
 -- Row Level Security
 --   * Anyone (anon) may INSERT a message  -> the public contact form works.

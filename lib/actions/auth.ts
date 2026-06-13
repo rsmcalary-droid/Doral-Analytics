@@ -48,6 +48,24 @@ export async function signUp(
   }
 
   const supabase = await createClient();
+
+  // Sign-up is invite-only: the email must already be in the `admins` table.
+  const { data: allowed, error: allowError } = await supabase.rpc("can_signup", {
+    check_email: email,
+  });
+  if (allowError || allowed !== true) {
+    if (allowError) {
+      console.error(
+        "can_signup RPC failed — did you run supabase/schema.sql?",
+        allowError.message,
+      );
+    }
+    return {
+      error:
+        "Sign-ups are limited to approved developers right now. Ask an admin to add your email, then try again.",
+    };
+  }
+
   const { data, error } = await supabase.auth.signUp({ email, password });
 
   if (error) {

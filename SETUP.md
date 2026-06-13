@@ -49,17 +49,16 @@ the Supabase steps below.
 
 ## 3. Add your team
 
-Two ways for a teammate to get access — both end with their email in the
-`admins` table:
+Sign-up is **invite-only**: a person can only create an account if their email
+is already in the `admins` table. To add a developer:
 
-- **They sign up, you approve:** they go to `/signup` and create an account,
-  then you add their email in **Supabase → Table Editor → `admins` → Insert
-  row**. They refresh and they're in.
-- **You add them first:** insert their email into `admins`, then they sign up at
-  `/signup` with that email.
+1. **Supabase → Table Editor → `admins` → Insert row** with their email — or run
+   `insert into public.admins (email) values ('them@example.com');`.
+2. They go to `/signup` and set their password.
 
-Anyone signed in whose email is **not** in `admins` sees a "pending approval"
-screen and no data. Remove someone by deleting their row.
+That's it — they can now read and reply to messages. Removing their row blocks
+both their access and any future sign-up. (To open registration to anyone
+later, ask and I'll switch sign-up back to open.)
 
 ---
 
