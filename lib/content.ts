@@ -3,6 +3,12 @@
 // replaced with a mailto link at render time (see components/legal-document.tsx).
 
 export type Item = { title: string; body: string };
+export type Founder = {
+  name: string;
+  title: string;
+  location: string;
+  bio: string;
+};
 export type LegalSection = { heading: string; body: string };
 export type LegalDoc = {
   title: string;
@@ -13,103 +19,117 @@ export type LegalDoc = {
 
 export const home = {
   hero: {
-    headline: "Turn your data into decisions you can act on.",
+    headline: "Bespoke technical solutions, built around your business.",
     subhead:
-      "Doral Analytics is a boutique consultancy in Cheltenham, England that helps growing companies make sense of their data and put it to work — from the first clean dashboard to the models behind your biggest decisions.",
+      "Doral Analytics designs and builds cutting-edge technical solutions shaped around what your business actually needs — delivered by a small, senior team who care as much about service as software.",
     ctaPrimary: "Start a conversation",
     ctaSecondary: "About us",
   },
   valueProps: [
     {
-      title: "Clarity over complexity",
-      body: "We cut through the noise and give you answers you can understand and use — not dashboards no one opens or reports no one reads. Every chart we build earns its place by helping someone make a better call.",
+      title: "Cutting-edge, with a point",
+      body: "We bring genuinely modern technology to real business problems — not novelty for its own sake, but solutions that give you an edge and stand the test of time.",
     },
     {
-      title: "Built for your business",
-      body: "Every engagement starts with your questions, your data, and your constraints. We tailor the approach to your team and the tools you already use, so what we build fits the way you actually work.",
+      title: "Built around your business",
+      body: "Every engagement starts with your goals, your people, and your constraints. We listen first and stay close throughout — responsive, hands-on, and accountable.",
     },
     {
-      title: "Practical from day one",
-      body: "We focus on work that pays off quickly: faster, more reliable reporting, cleaner data you can trust, and models that hold up in the real world rather than just on a slide.",
+      title: "Service at the centre",
+      body: "We pair serious technical capability with real strength in communication and stakeholder engagement, so what we build is understood, adopted, and genuinely useful.",
     },
   ] satisfies Item[],
   services: [
     {
-      title: "Business Intelligence & Dashboards",
-      body: "We design clear, reliable dashboards and reporting that give your team a single source of truth. From board-level KPIs to the day-to-day numbers your managers live in, we make the metrics that matter easy to see and easy to act on.",
+      title: "Bespoke Software & Systems",
+      body: "We design and build custom software and systems tailored to how you actually operate — from internal tools to the platforms your teams rely on every day.",
     },
     {
-      title: "Data Strategy & Engineering",
-      body: "We design and build the pipelines, data models, and infrastructure that turn scattered, messy data into a clean, well-documented foundation — so every report and analysis downstream is something you can trust.",
+      title: "Systems Integration & Automation",
+      body: "We connect the tools you already use and automate the manual work in between, so your processes run faster, more reliably, and with fewer errors.",
     },
     {
-      title: "Predictive & Advanced Analytics",
-      body: "We apply forecasting, segmentation, and machine learning to help you anticipate what's coming and act earlier — demand and revenue forecasts, customer and churn analysis, and decision models grounded in your own data.",
+      title: "Technical Strategy & Advisory",
+      body: "We help you choose the right technology and plan how to adopt it — practical, vendor-neutral advice grounded in what will actually work for your business.",
     },
     {
-      title: "Analytics Enablement & Training",
-      body: "We help your team build lasting data skills through hands-on training, clear documentation, and sensible ways of working — so the value of the work stays with you long after the engagement ends.",
+      title: "Stakeholder Engagement & Delivery",
+      body: "We bring deep public-sector experience in communication, stakeholder engagement, and process management to make sure change is understood, supported, and delivered.",
     },
   ] satisfies Item[],
   process: [
     {
       title: "Understand",
-      body: "We start with the decisions you need to make and the questions behind them, then map the data you already have against where you're trying to get to.",
+      body: "We start with your goals, your people, and how things work today — getting to the real problem before we propose a solution.",
     },
     {
       title: "Build",
-      body: "We do the work in tight, visible iterations — pipelines, dashboards, and models — checking in often so you can see progress and steer it as we go.",
+      body: "We design and build in tight, visible iterations, keeping you and your stakeholders involved so the solution fits and nothing's a surprise.",
     },
     {
       title: "Hand over",
-      body: "We document everything and train your team, leaving you with tools you understand and the confidence to run and extend them yourselves.",
+      body: "We document everything, train your team, and stay on hand — leaving you with something you own, understand, and can build on.",
     },
   ] satisfies Item[],
   closing: {
-    headline: "Let's put your data to work.",
-    body: "Whether you're starting from scratch or refining what you already have, we'd like to hear what you're trying to solve. Tell us about your goals and the decisions you're wrestling with, and we'll show you where your data can take you.",
+    headline: "Let's build something that works for you.",
+    body: "Whether you need a bespoke system, a smarter process, or a technology partner who'll actually listen, we'd like to hear what you're trying to achieve.",
     cta: "Get in touch",
   },
 };
 
 export const about = {
-  lead: "Doral Analytics is a boutique data and analytics consultancy that helps mid-market and growing companies turn their data into clear, confident decisions. We're a focused practice built on a simple conviction: most organisations are sitting on far more insight than they realise, and the work that matters is making it usable. Based in Cheltenham, England, we work with clients across the UK and beyond, keeping our engagements small enough to stay hands-on and senior from the first call to the final handover.",
+  lead: "Doral Analytics is a boutique consultancy building bespoke technical solutions for businesses that want to do things better. We were founded by two people who spent years in the public sector — leading communications, stakeholder engagement, and complex programmes — and who saw how often good technology fails because no one brings the people and the process along with it. We pair genuinely modern technology with that hard-won experience, and we deliberately take on a small number of engagements at a time, so each one gets senior attention and is built around what it actually needs. We're based in Cheltenham and London.",
   mission:
-    "Our mission is to help businesses see clearly and act with confidence. We do that by connecting the right data to the right questions, building the dashboards, models, and processes that put answers within reach, and leaving every client more capable than we found them. We measure our success not by the volume of reports we produce, but by the quality of the decisions our clients are able to make as a result.",
+    "Our mission is to give ambitious businesses an edge through technology that's built around them — not off-the-shelf, not over-engineered, but bespoke, modern, and genuinely useful. We care as much about service as we do about software: listening closely, communicating clearly, and staying close from the first conversation to the final handover, so the solutions we build are understood, adopted, and made to last.",
+  founders: [
+    {
+      name: "[Add name]",
+      title: "Director of Strategy",
+      location: "Cheltenham, England",
+      bio: "After years in the public sector leading communications and stakeholder engagement on complex, high-scrutiny programmes, [name] shapes the strategy behind every engagement — getting to the heart of what's really needed and making sure the work delivers against it.",
+    },
+    {
+      name: "[Add name]",
+      title: "Director of Operations",
+      location: "London, England",
+      bio: "Drawing on years of public-sector experience in process management and large-scale stakeholder engagement, [name] runs delivery day to day — keeping projects organised, communicative, and firmly on track, so everyone always knows where things stand.",
+    },
+  ] satisfies Founder[],
   approach: [
     {
-      title: "We start with the decision, not the data",
-      body: "Before we touch a database, we get clear on the questions you need answered and the decisions riding on them. That focus keeps the work practical and makes sure every dashboard, model, and report earns its place by changing what you do next.",
+      title: "We start with the business, not the technology",
+      body: "Before we propose a single solution, we get to grips with your goals, your people, and how things work today. The technology comes second — what matters first is solving the right problem.",
     },
     {
-      title: "We keep engagements small and senior",
-      body: "As a boutique firm, we work in tight, accountable teams without layers of handoffs. The people who scope your project are the people who do the work, so you get direct access, fast iteration, and a clear line of ownership from start to finish.",
+      title: "We keep it senior and personal",
+      body: "As a boutique firm, the people who scope your project are the people who deliver it. You get direct access, fast decisions, and a level of attention larger firms can't match.",
     },
     {
-      title: "We build for clarity over complexity",
-      body: "Sophisticated analysis only helps if people can act on it. We favour solutions that are well-structured, well-documented, and easy to understand, so the value holds up long after a project wraps and your team can carry it forward.",
+      title: "We make change land",
+      body: "Great technology only counts if it's adopted. We bring real expertise in communication, stakeholder engagement, and process to make sure your people are with you and the solution actually sticks.",
     },
     {
-      title: "We transfer knowledge, not dependency",
-      body: "Our aim is to make you more self-sufficient. We document our work, explain our reasoning, and train your team along the way, so the capability we build stays with you rather than walking out of the door when the engagement ends.",
+      title: "We build to hand over",
+      body: "We document our work, explain our thinking, and bring your team along — so you finish each engagement more capable, not more dependent.",
     },
   ] satisfies Item[],
   values: [
     {
-      title: "Clarity",
-      body: "We translate complex data into plain language and clear recommendations. If a finding can't be explained simply, it isn't finished — and we hold ourselves to that standard in every deliverable.",
+      title: "Client service",
+      body: "We're responsive, attentive, and genuinely invested in your outcome. You'll never wonder where things stand or feel like a ticket in a queue.",
+    },
+    {
+      title: "Innovation with purpose",
+      body: "We use modern, cutting-edge technology — but only ever in service of a real result. New for its own sake doesn't interest us; new that gives you an edge does.",
     },
     {
       title: "Integrity",
-      body: "We tell clients what the data actually shows, including when it's inconvenient or inconclusive. Honest analysis is the only kind worth paying for, and trust is the foundation of every engagement we take on.",
-    },
-    {
-      title: "Rigour",
-      body: "We're careful with our methods, assumptions, and sources. Sound conclusions come from sound work, and we'd rather take the time to get it right than ship a confident answer that doesn't hold up.",
+      body: "We tell you what we honestly think, including when it's not what you hoped to hear. Good advice is the foundation of a relationship worth having.",
     },
     {
       title: "Partnership",
-      body: "We treat our clients' goals as our own and stay invested in the outcome, not just the output. The best results come from working alongside your team, sharing context openly, and building something that lasts.",
+      body: "We treat your goals as our own and stay invested well beyond the deliverable. The best work comes from working shoulder to shoulder with your team.",
     },
   ] satisfies Item[],
 };
@@ -117,11 +137,11 @@ export const about = {
 export const privacy: LegalDoc = {
   title: "Privacy Policy",
   lastUpdated: "13 June 2026",
-  intro: `Doral Analytics ("Doral Analytics", "we", "us", or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains what personal information we collect through our website, how we use and protect it, and the rights you have under UK data protection law. We are a data and analytics consultancy based in Cheltenham, England. Our website is informational, and the only personal data we collect from the public is the information you choose to provide through our contact form. We do not sell your personal information. This policy is a general template and should be reviewed by a qualified solicitor before launch to confirm it reflects our actual practices and complies with applicable law.`,
+  intro: `Doral Analytics ("Doral Analytics", "we", "us", or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains what personal information we collect through our website, how we use and protect it, and the rights you have under UK data protection law. We are a technical solutions consultancy based in Cheltenham, England. Our website is informational, and the only personal data we collect from the public is the information you choose to provide through our contact form. We do not sell your personal information. This policy is a general template and should be reviewed by a qualified solicitor before launch to confirm it reflects our actual practices and complies with applicable law.`,
   sections: [
     {
       heading: "Who We Are",
-      body: `Doral Analytics is the data controller responsible for your personal data when you use this website. We are a boutique data and analytics consultancy based in Cheltenham, England. If you have any questions about this policy or about how we handle your information, you can reach us at {{CONTACT_EMAIL}}.`,
+      body: `Doral Analytics is the data controller responsible for your personal data when you use this website. We are a boutique technical solutions consultancy based in Cheltenham, England. If you have any questions about this policy or about how we handle your information, you can reach us at {{CONTACT_EMAIL}}.`,
     },
     {
       heading: "Information We Collect",
@@ -177,7 +197,7 @@ export const privacy: LegalDoc = {
 export const terms: LegalDoc = {
   title: "Terms of Service",
   lastUpdated: "13 June 2026",
-  intro: `These Terms of Service ("Terms") govern your access to and use of the Doral Analytics website (the "Site"). Doral Analytics is a data and analytics consultancy based in Cheltenham, England. By accessing or using the Site you agree to be bound by these Terms. If you do not agree, please do not use the Site. Please read these Terms carefully, as they include important information about your rights and obligations, together with limitations and exclusions that apply to you. This document is a general template provided for information only and should be reviewed by a qualified solicitor before launch to confirm it fits your circumstances and complies with applicable law.`,
+  intro: `These Terms of Service ("Terms") govern your access to and use of the Doral Analytics website (the "Site"). Doral Analytics is a technical solutions consultancy based in Cheltenham, England. By accessing or using the Site you agree to be bound by these Terms. If you do not agree, please do not use the Site. Please read these Terms carefully, as they include important information about your rights and obligations, together with limitations and exclusions that apply to you. This document is a general template provided for information only and should be reviewed by a qualified solicitor before launch to confirm it fits your circumstances and complies with applicable law.`,
   sections: [
     {
       heading: "Acceptance of Terms",

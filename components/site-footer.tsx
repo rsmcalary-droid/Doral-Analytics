@@ -16,7 +16,7 @@ export function SiteFooter() {
             </span>
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
-            {COMPANY.tagline}. A boutique data &amp; analytics consultancy based
+            {COMPANY.tagline}. A boutique technical solutions consultancy based
             in {COMPANY.location}.
           </p>
           <a

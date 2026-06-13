@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     template: "%s · Doral Analytics",
   },
   description:
-    "Doral Analytics is a boutique data and analytics consultancy that helps growing companies turn their data into clear, confident decisions.",
+    "Doral Analytics builds bespoke technical solutions for ambitious businesses — cutting-edge technology, shaped around what you actually need, with service at the centre.",
   openGraph: {
     title: "Doral Analytics",
     description:
-      "A boutique data and analytics consultancy. We help growing companies turn their data into clear, confident decisions.",
+      "Bespoke technical solutions, built around your business — cutting-edge technology with service at the centre.",
     type: "website",
     images: ["/logo.png"],
   },

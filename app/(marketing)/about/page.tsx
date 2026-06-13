@@ -5,10 +5,13 @@ import { about } from "@/lib/content";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Doral Analytics is a boutique data and analytics consultancy built around the decisions our clients need to make.",
+    "Meet Doral Analytics — a boutique technical solutions consultancy in Cheltenham and London, building bespoke, cutting-edge technology around what your business needs.",
 };
 
 export default function AboutPage() {
+  // Only show founders once real names are filled in (placeholders start with "[").
+  const founders = about.founders.filter((f) => !f.name.startsWith("["));
+
   return (
     <>
       <section className="mx-auto max-w-3xl px-6 pt-20 sm:pt-28">
@@ -27,6 +30,34 @@ export default function AboutPage() {
           <p className="mt-3 leading-relaxed text-ink/80">{about.mission}</p>
         </div>
       </section>
+
+      {founders.length > 0 && (
+        <section className="mx-auto mt-16 max-w-5xl px-6">
+          <h2 className="font-serif text-3xl text-ink">The people behind it</h2>
+          <p className="mt-3 max-w-2xl leading-relaxed text-muted">
+            Doral Analytics was founded by two people who spent years in the
+            public sector — and who care as much about communication and
+            delivery as they do about technology.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {founders.map((f) => (
+              <div
+                key={f.title}
+                className="rounded-2xl border border-line bg-white p-7"
+              >
+                <p className="text-xs font-medium uppercase tracking-wider text-navy">
+                  {f.title}
+                </p>
+                <h3 className="mt-2 font-serif text-2xl text-ink">{f.name}</h3>
+                <p className="mt-0.5 text-sm text-muted">{f.location}</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted">
+                  {f.bio}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto mt-16 max-w-5xl px-6">
         <h2 className="font-serif text-3xl text-ink">How we work</h2>
