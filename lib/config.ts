@@ -6,6 +6,10 @@ export const COMPANY = {
   name: "Doral Systems Ltd",
   tagline: "Innovating Business Solutions",
   location: "Cheltenham, England",
+  /** Companies House registration number (England & Wales). */
+  companyNumber: "17280400",
+  /** Registered office address, shown in the footer per UK trading-disclosure rules. */
+  registeredAddress: "Hyde Villas, Hyde Lane, Cheltenham, UK, GL51 9QN",
 } as const;
 
 /** Public-facing contact address. Used in legal pages and the contact page.

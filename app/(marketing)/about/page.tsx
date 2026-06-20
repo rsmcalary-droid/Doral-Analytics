@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { about } from "@/lib/content";
+import { COMPANY } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "About",
@@ -101,6 +102,11 @@ export default function AboutPage() {
           Get in touch
         </Link>
       </section>
+
+      <p className="mx-auto mt-16 max-w-3xl px-6 text-center text-xs text-muted">
+        {COMPANY.name} is registered in England &amp; Wales, company number{" "}
+        {COMPANY.companyNumber}.
+      </p>
     </>
   );
 }

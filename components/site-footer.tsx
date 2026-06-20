@@ -25,6 +25,12 @@ export function SiteFooter() {
           >
             {CONTACT_EMAIL}
           </a>
+          <p className="mt-5 max-w-xs text-xs leading-relaxed text-muted">
+            Registered office: {COMPANY.registeredAddress}.
+            <br />
+            Registered in England &amp; Wales, company no.{" "}
+            {COMPANY.companyNumber}.
+          </p>
         </div>
 
         <div>
