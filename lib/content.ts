@@ -137,7 +137,7 @@ export const about = {
 export const privacy: LegalDoc = {
   title: "Privacy Policy",
   lastUpdated: "13 June 2026",
-  intro: `Doral Systems Ltd ("Doral Systems", "we", "us", or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains what personal information we collect through our website, how we use and protect it, and the rights you have under UK data protection law. We are a technical solutions consultancy based in Cheltenham, England. Our website is informational, and the only personal data we collect from the public is the information you choose to provide through our contact form. We do not sell your personal information. This policy is a general template and should be reviewed by a qualified solicitor before launch to confirm it reflects our actual practices and complies with applicable law.`,
+  intro: `Doral Systems Ltd ("Doral Systems", "we", "us", or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains what personal information we collect through our website, how we use and protect it, and the rights you have under UK data protection law. We are a technical solutions consultancy based in Cheltenham, England. Our website is purely informational: it has no forms, accounts, or database, and it does not collect personal data from visitors. If you choose to email us, we handle the information you send as described below. We do not sell your personal information. This policy is a general template and should be reviewed by a qualified solicitor before launch to confirm it reflects our actual practices and complies with applicable law.`,
   sections: [
     {
       heading: "Who We Are",
@@ -145,27 +145,27 @@ export const privacy: LegalDoc = {
     },
     {
       heading: "Information We Collect",
-      body: `We collect only the personal information you choose to submit through our website contact form: your name, your email address, an optional subject line, and the contents of your message. We do not require you to create an account, and we do not collect payment details, special category data, or location data through the website. Our site does not use third-party advertising or analytics trackers, so we do not build profiles of visitors or track you across other sites. A limited amount of technical information, such as a standard server log entry, may be generated automatically when the site is accessed; this is used only to keep the site secure and running and is not used to identify members of the public.`,
+      body: `The website itself does not collect personal information. The only personal information we receive is what you choose to send us when you email {{CONTACT_EMAIL}}, which will typically be your name, your email address, and the contents of your message. We do not require you to create an account, and we do not collect payment details, special category data, or location data through the website. Our site does not use third-party advertising or analytics trackers, so we do not build profiles of visitors or track you across other sites. A limited amount of technical information, such as a standard server log entry, may be generated automatically by our hosting provider when the site is accessed; this is used only to keep the site secure and running and is not used to identify members of the public.`,
     },
     {
       heading: "How We Use Your Information",
-      body: `We use the information you submit through the contact form for one purpose: to read, respond to, and follow up on your enquiry. That includes contacting you by email to answer your question, to provide the information you asked for, or to discuss whether and how our services might fit your needs. We do not use your contact-form information for marketing, and we will not add you to any mailing list without a separate, clear opt-in. We never sell, rent, or trade your personal information.`,
+      body: `We use the information you send us by email for one purpose: to read, respond to, and follow up on your enquiry. That includes contacting you by email to answer your question, to provide the information you asked for, or to discuss whether and how our services might fit your needs. We do not use your information for marketing, and we will not add you to any mailing list without a separate, clear opt-in. We never sell, rent, or trade your personal information.`,
     },
     {
       heading: "Legal Bases for Processing",
-      body: `Under the UK GDPR we must have a lawful basis for processing your personal data. We rely on your consent, which you give by choosing to complete and submit the contact form, and on our legitimate interests in responding to enquiries, communicating with prospective clients, and operating and securing our website — balanced against your rights and expectations. Where you contact us about engaging our services, processing may also be necessary to take steps at your request before entering into a contract. You can withdraw your consent at any time by contacting us, which will not affect the lawfulness of any processing carried out beforehand. If you are located in the European Economic Area, the EU GDPR may also apply on the same bases.`,
+      body: `Under the UK GDPR we must have a lawful basis for processing your personal data. We rely on your consent, which you give by choosing to email us, and on our legitimate interests in responding to enquiries, communicating with prospective clients, and operating and securing our website — balanced against your rights and expectations. Where you contact us about engaging our services, processing may also be necessary to take steps at your request before entering into a contract. You can withdraw your consent at any time by contacting us, which will not affect the lawfulness of any processing carried out beforehand. If you are located in the European Economic Area, the EU GDPR may also apply on the same bases.`,
     },
     {
       heading: "How We Store and Protect Your Information",
-      body: `Contact-form submissions are stored in a managed PostgreSQL database provided by Supabase, hosted on servers located in the European Economic Area (Ireland). Access to that database is restricted to authorised personnel and protected by authentication controls. We apply reasonable technical and organisational measures designed to protect personal information against unauthorised access, disclosure, alteration, or destruction, including encryption in transit. No method of transmission or storage is completely secure, however, and we cannot guarantee absolute security, so please avoid sending highly sensitive or confidential information through the contact form.`,
+      body: `Emails you send us are held in our business email account, which is protected by authentication controls and accessible only to authorised personnel. We apply reasonable technical and organisational measures designed to protect personal information against unauthorised access, disclosure, alteration, or destruction, including encryption in transit. No method of transmission or storage is completely secure, however, and we cannot guarantee absolute security, so please avoid sending highly sensitive or confidential information by email.`,
     },
     {
       heading: "Data Retention",
-      body: `We keep contact-form information only for as long as we need it to handle your enquiry, and for a reasonable period afterwards to maintain a record of our correspondence, follow up on related discussions, and meet any legal or accounting obligations. When the information is no longer needed for these purposes we delete it or otherwise remove its connection to you. If you ask us to delete your information sooner, we will do so unless we are required to keep it by law.`,
+      body: `We keep enquiry emails only for as long as we need them to handle your enquiry, and for a reasonable period afterwards to maintain a record of our correspondence, follow up on related discussions, and meet any legal or accounting obligations. When the information is no longer needed for these purposes we delete it or otherwise remove its connection to you. If you ask us to delete your information sooner, we will do so unless we are required to keep it by law.`,
     },
     {
       heading: "Sharing and Sub-Processors",
-      body: `We do not sell your personal information and we do not share it for anyone else's marketing. We rely on a small number of service providers (sub-processors) who process information on our behalf and under our instructions. Supabase hosts the database and provides the authentication used by our internal team. When we reply to your enquiry, we do so from our own business email accounts. We may also disclose information where required by law, to comply with legal process, or to protect our rights, safety, or property and those of others.`,
+      body: `We do not sell your personal information and we do not share it for anyone else's marketing. We rely on a small number of service providers (sub-processors) who process information on our behalf and under our instructions. Our website is hosted by Vercel. When we reply to your enquiry, we do so from our own business email accounts. We may also disclose information where required by law, to comply with legal process, or to protect our rights, safety, or property and those of others.`,
     },
     {
       heading: "Your Rights",
@@ -173,15 +173,15 @@ export const privacy: LegalDoc = {
     },
     {
       heading: "Cookies",
-      body: `Our public website uses only minimal, strictly necessary cookies. We do not use advertising, marketing, or third-party analytics cookies. The single functional cookie we use is a session cookie that supports the internal developer login used to maintain the site; it is not used to track members of the public. Because we rely only on strictly necessary cookies, the site does not require a cookie consent banner under the Privacy and Electronic Communications Regulations (PECR), though your browser settings let you block or delete cookies if you prefer.`,
+      body: `Our website does not set any cookies. We do not use advertising, marketing, or third-party analytics cookies, so the site does not require a cookie consent banner under the Privacy and Electronic Communications Regulations (PECR).`,
     },
     {
       heading: "Children's Privacy",
-      body: `Our website and services are intended for businesses and adults. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information through the contact form, please contact us at {{CONTACT_EMAIL}} and we will delete it.`,
+      body: `Our website and services are intended for businesses and adults. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us at {{CONTACT_EMAIL}} and we will delete it.`,
     },
     {
       heading: "International Data Transfers",
-      body: `Your information is stored within the European Economic Area. Some of our service providers may process limited information in other countries. Where personal data is transferred outside the UK or the EEA, we take steps to ensure it is protected by appropriate safeguards, such as the UK government's adequacy regulations or the International Data Transfer Agreement, as required by UK data protection law.`,
+      body: `Some of our service providers may process limited information in other countries. Where personal data is transferred outside the UK or the EEA, we take steps to ensure it is protected by appropriate safeguards, such as the UK government's adequacy regulations or the International Data Transfer Agreement, as required by UK data protection law.`,
     },
     {
       heading: "Changes to This Policy",
@@ -212,8 +212,8 @@ export const terms: LegalDoc = {
       body: `The Site and all of its contents — including text, graphics, logos, the Doral Systems name and wordmark, page layouts, design elements, images, and any underlying code — are owned by or licensed to Doral Systems and are protected by UK and international copyright, trade mark, and other intellectual property laws. Except as expressly permitted, you may not copy, reproduce, distribute, modify, publicly display, create derivative works from, or otherwise exploit any part of the Site without our prior written permission. You are granted a limited, revocable, non-exclusive, non-transferable licence to access and view the Site for your own informational and non-commercial purposes. All rights not expressly granted are reserved.`,
     },
     {
-      heading: "Contact Form and Submissions",
-      body: `The Site offers a contact form so you can send us enquiries. Any information you submit through the Site, including your name, email address, and the contents of your message ("Submissions"), is provided voluntarily. You are responsible for the accuracy of your Submissions and agree not to submit anything false, misleading, unlawful, or infringing, or any sensitive personal information that is not necessary for your enquiry. By sending a Submission you grant us permission to use the information to respond to and manage your enquiry and any resulting business relationship. Please do not include confidential or proprietary information in a Submission, as we cannot guarantee that communications sent through the Site are secure, and sending an enquiry does not by itself create any consulting, advisory, or other professional relationship between you and Doral Systems.`,
+      heading: "Enquiries by Email",
+      body: `You are welcome to email us at {{CONTACT_EMAIL}} with enquiries. Any information you send us, including your name, email address, and the contents of your message, is provided voluntarily. You are responsible for the accuracy of what you send and agree not to send anything false, misleading, unlawful, or infringing, or any sensitive personal information that is not necessary for your enquiry. By emailing us you grant us permission to use the information to respond to and manage your enquiry and any resulting business relationship. Please do not include confidential or proprietary information in an initial enquiry, as we cannot guarantee that email is secure, and sending an enquiry does not by itself create any consulting, advisory, or other professional relationship between you and Doral Systems.`,
     },
     {
       heading: `Disclaimers; Information Provided "As Is"`,
@@ -225,7 +225,7 @@ export const terms: LegalDoc = {
     },
     {
       heading: "Indemnification",
-      body: `You agree to indemnify and hold harmless Doral Systems and its owners, members, employees, contractors, and agents from and against any claims, liabilities, damages, losses, costs, and expenses, including reasonable legal fees, arising out of or connected with: your access to or use of the Site; your breach of these Terms; your breach of any applicable law or the rights of any third party; or any content or Submission you provide through the Site. This obligation survives the termination of these Terms and your use of the Site.`,
+      body: `You agree to indemnify and hold harmless Doral Systems and its owners, members, employees, contractors, and agents from and against any claims, liabilities, damages, losses, costs, and expenses, including reasonable legal fees, arising out of or connected with: your access to or use of the Site; your breach of these Terms; your breach of any applicable law or the rights of any third party; or any content you provide to us through the Site or by email. This obligation survives the termination of these Terms and your use of the Site.`,
     },
     {
       heading: "Third-Party Links",

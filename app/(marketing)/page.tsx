@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { home } from "@/lib/content";
 import { HeroGraphic } from "@/components/hero-graphic";
+import { CONTACT_EMAIL } from "@/lib/config";
 
 const iconProps = {
   width: 20,
@@ -52,12 +53,12 @@ export default function HomePage() {
               {home.hero.subhead}
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <Link
-                href="/contact"
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="rounded-full bg-navy px-6 py-3 text-sm font-medium text-paper transition-colors hover:bg-navy-dark"
               >
                 {home.hero.ctaPrimary}
-              </Link>
+              </a>
               <Link
                 href="/about"
                 className="rounded-full border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink/40"
@@ -164,12 +165,12 @@ export default function HomePage() {
           <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-paper/80">
             {home.closing.body}
           </p>
-          <Link
-            href="/contact"
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
             className="mt-8 inline-flex rounded-full bg-paper px-7 py-3 text-sm font-medium text-navy transition-colors hover:bg-white"
           >
             {home.closing.cta}
-          </Link>
+          </a>
         </div>
       </section>
     </>

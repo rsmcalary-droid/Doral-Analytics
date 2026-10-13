@@ -63,11 +63,6 @@ export function SiteFooter() {
                 Terms of Service
               </Link>
             </li>
-            <li>
-              <Link href="/login" className="text-ink/80 hover:text-ink">
-                Developers
-              </Link>
-            </li>
           </ul>
         </div>
       </div>

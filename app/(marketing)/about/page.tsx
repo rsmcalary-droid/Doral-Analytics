@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { about } from "@/lib/content";
-import { COMPANY } from "@/lib/config";
+import { COMPANY, CONTACT_EMAIL } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "About",
@@ -95,12 +95,12 @@ export default function AboutPage() {
           Tell us what you&apos;re trying to solve — we&apos;ll show you what we
           can build for you.
         </p>
-        <Link
-          href="/contact"
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
           className="mt-7 inline-flex rounded-full bg-navy px-6 py-3 text-sm font-medium text-paper transition-colors hover:bg-navy-dark"
         >
           Get in touch
-        </Link>
+        </a>
       </section>
 
       <p className="mx-auto mt-16 max-w-3xl px-6 text-center text-xs text-muted">

@@ -12,25 +12,11 @@ export const COMPANY = {
   registeredAddress: "Hyde Villas, Hyde Lane, Cheltenham, UK, GL51 9QN",
 } as const;
 
-/** Public-facing contact address. Used in legal pages and the contact page.
+/** Public-facing contact address. Used in the footer and legal pages.
  *  Hardcoded so it can't be overridden by a stale NEXT_PUBLIC_CONTACT_EMAIL. */
 export const CONTACT_EMAIL = "hello@doralsystems.co.uk";
 
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
 ] as const;
-
-/** True once real Supabase credentials are present (not the placeholders). */
-export function isSupabaseConfigured(): boolean {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  return (
-    !!url &&
-    !!key &&
-    url.startsWith("http") &&
-    !url.includes("YOUR-") &&
-    !key.includes("your-")
-  );
-}
