@@ -19,4 +19,5 @@ export const CONTACT_EMAIL = "hello@doralsystems.co.uk";
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ] as const;
